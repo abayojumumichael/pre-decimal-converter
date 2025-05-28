@@ -9,18 +9,6 @@ public class PreDecimalCurrency {
         this.pence = pence;
     }
 
-    public int getPounds() {
-        return pounds;
-    }
-
-    public int getShillings() {
-        return shillings;
-    }
-
-    public int getPence() {
-        return pence;
-    }
-
     @Override
     public String toString() {
         return String.format("£%d %ds %dd", pounds, shillings, pence);
