@@ -1,9 +1,15 @@
+/**
+ * Provides a command-line interface for converting and displaying British currency values.
+ */
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInterface {
     private Scanner reader = new Scanner(System.in);
     
+    /**
+     * Runs the user interface, handling user input and output.
+     */
     public void run() {
         try {
             System.out.println("What would you like to do?");
@@ -73,6 +79,13 @@ public class UserInterface {
         }
     }
     
+    /**
+     * Checks if all input values are non-negative.
+     * @param pounds the number of pounds
+     * @param shillings the number of shillings
+     * @param pence the number of pence
+     * @return true if all values are non-negative, false otherwise
+     */
     public Boolean checkNonNegative(int pounds, int shillings, int pence) {
         Boolean isValid = true;
         int[] valuesList = {pounds, shillings, pence};
@@ -86,6 +99,13 @@ public class UserInterface {
         return isValid;
     }
 
+    /**
+     * Checks if at least one input value is greater than zero.
+     * @param pounds the number of pounds
+     * @param shillings the number of shillings
+     * @param pence the number of pence
+     * @return true if at least one value is greater than zero, false otherwise
+     */
     public Boolean checkGreaterThanZero(int pounds, int shillings, int pence) {
         int total = 0;
         Boolean isValid = true;
